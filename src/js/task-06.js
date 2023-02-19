@@ -7,8 +7,9 @@ const removeInputElClasses = () => {
 	inputEl.classList.remove('invalid');
 };
 
-// 3 Додати функцію, яка додає потрібний клас зі стилями під час втрати фокусу над елементом
-const changeInputElColor = event => {
+// 3 Додати функцію, яка валідує довжину введеного значення
+// і додає потрібний клас зі стилями під час втрати фокусу над елементом
+const validationLength = event => {
 	event.currentTarget.value.length === Number(inputEl.dataset.length)
 		? inputEl.classList.add('valid')
 		: inputEl.classList.add('invalid');
@@ -16,4 +17,4 @@ const changeInputElColor = event => {
 
 // 4 Додати слухачів подій
 inputEl.addEventListener('input', removeInputElClasses);
-inputEl.addEventListener('blur', changeInputElColor);
+inputEl.addEventListener('blur', validationLength);
