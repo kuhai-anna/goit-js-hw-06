@@ -14,11 +14,11 @@ const textColorEl = document.querySelector('.color');
 const changeColorBtn = document.querySelector('.change-color');
 
 // 2 Додати функцію, яка змінює колір фону
-const changeColorButtonClickHendler = () => {
+const changeBodyColor = () => {
 	const color = getRandomHexColor();
 	bodyEl.style.backgroundColor = color;
 	textColorEl.textContent = color;
 };
 
 // 3 Додати слухачів подій
-changeColorBtn.addEventListener('click', changeColorButtonClickHendler);
+changeColorBtn.addEventListener('click', changeBodyColor);

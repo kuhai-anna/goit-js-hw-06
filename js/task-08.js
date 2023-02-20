@@ -2,7 +2,7 @@
 const formEl = document.querySelector('.login-form');
 
 // 2 Додати функцію обробки відправлення форми
-const formElSubmitHendler = event => {
+const handleSubmit = event => {
 	event.preventDefault();
 
 	const formElements = event.currentTarget.elements;
@@ -23,4 +23,4 @@ const formElSubmitHendler = event => {
 };
 
 // 3 Додати слухачів подій
-formEl.addEventListener('submit', formElSubmitHendler);
+formEl.addEventListener('submit', handleSubmit);

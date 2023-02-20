@@ -6,9 +6,9 @@ console.log(inputEl);
 console.log(textEl);
 
 // 2 Дадати функцію, яка змінює розмір шрифта
-const inputElEnterHendler = event => {
+const changeFontSize = event => {
 	textEl.style.fontSize = `${event.currentTarget.value}px`;
 };
 
 // 3 Додати слухача подій
-inputEl.addEventListener('input', inputElEnterHendler);
+inputEl.addEventListener('input', changeFontSize);
