@@ -10,7 +10,7 @@ const removeInputElClasses = () => {
 // 3 Додати функцію, яка валідує довжину введеного значення
 // і додає потрібний клас зі стилями під час втрати фокусу над елементом
 const validationLength = event => {
-	event.currentTarget.value.length === Number(inputEl.dataset.length)
+	event.currentTarget.value.trim().length === Number(inputEl.dataset.length)
 		? inputEl.classList.add('valid')
 		: inputEl.classList.add('invalid');
 };
