@@ -1,8 +1,8 @@
 // 1 Отримати посилання на форму
-const formEl = document.querySelector('.login-form');
+const loginFormEl = document.querySelector('.login-form');
 
 // 2 Додати функцію обробки відправлення форми
-const handleSubmit = event => {
+const onLoginFormElSubmit = event => {
 	event.preventDefault();
 
 	const formElements = event.currentTarget.elements;
@@ -23,4 +23,4 @@ const handleSubmit = event => {
 };
 
 // 3 Додати слухачів подій
-formEl.addEventListener('submit', handleSubmit);
+formEl.addEventListener('submit', onLoginFormElSubmit);
