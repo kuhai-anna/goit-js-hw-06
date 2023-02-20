@@ -1,10 +1,10 @@
 const inputEl = document.querySelector('#name-input');
 const output = document.querySelector('#name-output');
 
-const handleEnter = event => {
+const inputElEnterHendler = event => {
 	event.currentTarget.value.trim() === ''
 		? (output.textContent = 'Anonymous')
 		: (output.textContent = event.currentTarget.value);
 };
 
-inputEl.addEventListener('input', handleEnter);
+inputEl.addEventListener('input', inputElEnterHendler);
