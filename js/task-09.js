@@ -13,12 +13,22 @@ const bodyEl = document.querySelector('body');
 const textColorEl = document.querySelector('.color');
 const changeColorBtn = document.querySelector('.change-color');
 
-// 2 Додати функцію, яка змінює колір фону
-const onChangeColorBtnClick = () => {
+// 2 Додати слухачів подій
+changeColorBtn.addEventListener('click', onChangeColorBtnClick);
+
+// 3 Додати функцію, яка змінює колір фону
+function onChangeColorBtnClick() {
 	const color = getRandomHexColor();
 	bodyEl.style.backgroundColor = color;
 	textColorEl.textContent = color;
-};
+}
 
-// 3 Додати слухачів подій
-changeColorBtn.addEventListener('click', onChangeColorBtnClick);
+// // 2 Додати функцію, яка змінює колір фону
+// const onChangeColorBtnClick = () => {
+// 	const color = getRandomHexColor();
+// 	bodyEl.style.backgroundColor = color;
+// 	textColorEl.textContent = color;
+// };
+
+// // 3 Додати слухачів подій
+// changeColorBtn.addEventListener('click', onChangeColorBtnClick);
